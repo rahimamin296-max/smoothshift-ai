@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmoothShift AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #030014;
+        color: #fff;
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+      }
+
+      /* Tech Carousel Animation */
+      .scroller-inner {
+        animation: scroll 40s linear infinite;
+      }
+
+      @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      /* Animated Gradient for "Who We Are" section */
+      .animated-gradient {
+        background: linear-gradient(90deg, #030014, #1a0b3b, #030014);
+        background-size: 200% 200%;
+        animation: gradient-move 15s ease infinite;
+      }
+
+      @keyframes gradient-move {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      /* Animated Mock UIs */
+      .typing-dot {
+        animation: typing-blink 1.4s infinite both;
+      }
+      .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+      .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+      @keyframes typing-blink {
+        0% { opacity: 0.2; }
+        20% { opacity: 1; }
+        100% { opacity: 0.2; }
+      }
+
+      .graph-bar {
+        animation: grow-bar 1.5s ease-out forwards;
+        transform-origin: bottom;
+      }
+
+      @keyframes grow-bar {
+        0% { transform: scaleY(0); }
+        100% { transform: scaleY(1); }
+      }
+      
+      .code-cursor {
+        animation: blink-cursor 1s step-end infinite;
+      }
+
+      @keyframes blink-cursor {
+        from, to { border-color: transparent; }
+        50% { border-color: #a78bfa; } /* purple-400 */
+      }
+      
+      /* Glowing stars for header */
+      @keyframes twinkle-glow {
+        0% { opacity: 0.2; }
+        50% { opacity: 0.4; filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5)); }
+        100% { opacity: 0.2; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
